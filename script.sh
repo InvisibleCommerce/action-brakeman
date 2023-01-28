@@ -13,7 +13,7 @@ TEMP_PATH="$(mktemp -d)"
 PATH="${TEMP_PATH}:$PATH"
 
 echo '::group::🐶 Installing reviewdog ... https://github.com/InvisibleCommerce/reviewdog'
-curl -sfL https://raw.githubusercontent.com/InvisibleCommerce/reviewdog/master/install.sh | sh -s -- -b "${TEMP_PATH}" "${REVIEWDOG_VERSION}" 2>&1
+curl -sfL https://raw.githubusercontent.com/InvisibleCommerce/reviewdog/use-api/install.sh | sh -s -- -b "${TEMP_PATH}" "${REVIEWDOG_VERSION}" 2>&1
 echo '::endgroup::'
 
 echo '::group:: Installing brakeman with extensions ... https://github.com/presidentbeef/brakeman'
